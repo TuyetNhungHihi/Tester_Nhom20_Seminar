@@ -16,6 +16,46 @@
 ---
 ## 📌 Danh sách Testcase đã thực hiện
 
+### ✅ Testcase Login_Success: Chức năng đăng nhập thành công
+
+```groovy
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://hypershop-scys.onrender.com/account/login')
+
+WebUI.setText(findTestObject('Page_HyperS/username'), '010203040506')
+
+WebUI.setEncryptedText(findTestObject('Page_HyperS/password'), 'WnS9Co/EQJino+FQsLrjvQ==')
+
+WebUI.click(findTestObject('Page_HyperS/btn_login'))
+
+WebUI.waitForElementVisible(findTestObject('Page_HyperS/btn_quay_lai'), 20)
+
+WebUI.click(findTestObject('Page_HyperS/btn_quay_lai'))
+
+WebUI.delay(3)
+---
+## 📌 Danh sách Testcase đã thực hiện
+
 ### ✅ Testcase Banner_01: Kiểm tra chức năng lọc banner theo trạng thái “Ngưng hoạt động”.
 **Mô tả:**  
 Kiểm tra chức năng lọc banner theo trạng thái “Ngưng hoạt động”.
